@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.airfranceklm.fasttrack.assignment.model.Holiday;
@@ -21,5 +23,10 @@ public class HolidaysApi {
     @GetMapping
     public ResponseEntity<List<Holiday>> getHolidays() {
         return ResponseEntity.ok(holidayService.getHolidays());
+    }
+
+    @PostMapping
+    public ResponseEntity<Holiday> addHoliday(@RequestBody Holiday holiday) {
+        return ResponseEntity.ok(holidayService.addHoliday(holiday));
     }
 }
