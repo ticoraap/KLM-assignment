@@ -30,7 +30,7 @@ public class HolidayRuleServiceTest {
 		existingHoliday.setEndOfHoliday(existingEnd);
 
 		Instant newStart = LocalDateTime.of(2025, 10, 12, 0, 0).toInstant(ZoneOffset.UTC);
-		Instant newEnd = LocalDateTime.of(2025, 10, 15, 23, 59).toInstant(ZoneOffset.UTC);
+		Instant newEnd = LocalDateTime.of(2025, 10, 14, 23, 59).toInstant(ZoneOffset.UTC);
 		Holiday newHoliday = new Holiday();
 		newHoliday.setStartOfHoliday(newStart);
 		newHoliday.setEndOfHoliday(newEnd);
